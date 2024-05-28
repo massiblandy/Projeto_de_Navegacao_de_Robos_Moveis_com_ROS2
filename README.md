@@ -29,7 +29,7 @@ docker compose up ros-master
 ```
 Quando o port for adicionado, clique em "Open in Browser" para acessar a interface.
 
----
+
 ### Executar dentro do Docker
 #### Configurar o Ambiente de Simulação
 Os comandos apresentados a partir de aquí são rodados no ambiente simulado do Gazebo.
