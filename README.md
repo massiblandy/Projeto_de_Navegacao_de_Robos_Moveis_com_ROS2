@@ -1,5 +1,5 @@
 # 🤖 Projeto de Navegação de Robôs Móveis com ROS2
-
+---
 ## Descrição
 Este é o Projeto Final da disciplina Navegação de Robôs Móveis (CCR210) que visa implementar e simular um algoritmo de planejamento de trajetória para um robô móvel usando ROS2 Humble e Gazebo. Utilizando o algoritmo A*, o robô simulado R2-D2 navega em um ambiente mapeado, desviando de obstáculos fixos.
 
