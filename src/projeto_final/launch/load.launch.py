@@ -17,7 +17,7 @@ def generate_launch_description():
         default_value='',
         description='Top-level namespace')
 
-    urdf_tutorial_path = get_package_share_path('pacote_de_exemplos')
+    urdf_tutorial_path = get_package_share_path('projeto_final')
     default_model_path = urdf_tutorial_path / 'urdf/myfirstrobot.urdf.xacro'
     # default_model_path = urdf_tutorial_path / 'urdf/sam_bot_description.urdf'
     default_rviz_config_path = urdf_tutorial_path / 'config/rviz/robot.rviz'
@@ -117,7 +117,7 @@ def generate_launch_description():
     #      executable='ekf_node',
     #      name='ekf_filter_node',
     #      parameters=[
-    #          [get_package_share_directory('pacote_de_exemplos'), '/config/nav/ekf.yaml'], 
+    #          [get_package_share_directory('projeto_final'), '/config/nav/ekf.yaml'], 
     #          {'use_sim_time': LaunchConfiguration('use_sim_time')}
     #     ],
     #     arguments=['--ros-args', '--log-level', LaunchConfiguration('log_level')]

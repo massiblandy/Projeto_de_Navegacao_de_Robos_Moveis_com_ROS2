@@ -188,7 +188,7 @@ class PathNode(Node):
 
         self.path_calculated = True
 
-        matrix = self.load_map('src/map.pgm') #Carrega a matriz do mapa
+        matrix = self.load_map('src/projeto_final/projeto_final/map.pgm') #Carrega a matriz do mapa
         if matrix is None:
             rclpy.shutdown() #Se o mapa não foi carregado corretamente, encerra o nó e o programa
             return
@@ -197,7 +197,7 @@ class PathNode(Node):
         self.imap = 1
 
         self.get_logger().info('Expanding obstacles in the map')
-        self.get_logger().info('It could take some time. Please wait')
+        self.get_logger().info('It could take some time. Please wait!!!')
         #Expande os obstáculos na matriz do mapa para garantir uma distância segura
         matrix = expand_obstacles(matrix, expansion_size=11) #Mudar este valor para o valor desejado em dependência da disposição dos obstáculos e do caminho
 
@@ -209,11 +209,11 @@ class PathNode(Node):
         start = self.convert_coordinates(start_x, start_y)
         self.get_logger().info(f'Starting A* from: {start} (Gazebo: {start_x}, {start_y})')
 
-        #Coordenadas de destino no mapa
-        #end_x = 0
-        #end_y = 0
-        end_x = -8.5
-        end_y = -5.5
+        #Coordenadas de/ destino no mapa
+        end_x = 0
+        end_y = 0
+        #end_x = -8.5
+        #end_y = -5.5
         end = self.convert_coordinates(end_x, end_y)
         self.get_logger().info(f'Ending A* at: {end} (Gazebo: {end_x}, {end_y})')
 

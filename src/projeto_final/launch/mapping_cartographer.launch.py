@@ -15,16 +15,16 @@ def generate_launch_description():
         description='Flag to set log level')
 
     simulation = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([get_package_share_directory('pacote_de_exemplos'), '/launch/simulation.launch.py']),
+        PythonLaunchDescriptionSource([get_package_share_directory('projeto_final'), '/launch/simulation.launch.py']),
            launch_arguments={
-                'world_path': [get_package_share_directory('pacote_de_exemplos'), '/simulation/worlds/simple_room_with_fixed_boxes.world'],
+                'world_path': [get_package_share_directory('projeto_final'), '/simulation/worlds/simple_room_with_fixed_boxes.world'],
             }.items(),
     )
 
     robot = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([get_package_share_directory('pacote_de_exemplos'), '/launch/load.launch.py']),
+        PythonLaunchDescriptionSource([get_package_share_directory('projeto_final'), '/launch/load.launch.py']),
            launch_arguments={
-                'rvizconfig': [get_package_share_directory('pacote_de_exemplos'), '/config/rviz/mapping_cartographer.rviz'],
+                'rvizconfig': [get_package_share_directory('projeto_final'), '/config/rviz/mapping_cartographer.rviz'],
             }.items(),
     )
 
@@ -41,7 +41,7 @@ def generate_launch_description():
             'use_sim_time': True
         }],
         arguments=[
-            '-configuration_directory', [get_package_share_directory('pacote_de_exemplos'), '/config/nav/'],
+            '-configuration_directory', [get_package_share_directory('projeto_final'), '/config/nav/'],
             '-configuration_basename', 'cartographer.lua',
             '--ros-args', '--log-level', LaunchConfiguration('log_level')
         ]

@@ -9,7 +9,7 @@ from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
-    urdf_tutorial_path = get_package_share_path('pacote_de_exemplos')
+    urdf_tutorial_path = get_package_share_path('projeto_final')
     # default_model_path = urdf_tutorial_path / 'urdf/sam_bot_description.urdf'
     default_model_path = urdf_tutorial_path / 'urdf/myfirstrobot.urdf.xacro'
     default_rviz_config_path = urdf_tutorial_path / 'config/rviz/robot.rviz'
